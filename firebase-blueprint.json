@@ -1,0 +1,27 @@
+{
+  "entities": {
+    "Reservation": {
+      "title": "Reservation",
+      "description": "A client reservation for a hair service",
+      "type": "object",
+      "properties": {
+        "service": { "type": "string", "description": "The name of the service booked" },
+        "date": { "type": "string", "format": "date-time", "description": "The date of the reservation" },
+        "time": { "type": "string", "description": "The time slot booked" },
+        "name": { "type": "string", "description": "Client's full name" },
+        "email": { "type": "string", "format": "email", "description": "Client's email" },
+        "phone": { "type": "string", "description": "Client's phone number" },
+        "notes": { "type": "string", "description": "Additional notes" },
+        "status": { "type": "string", "enum": ["pending", "confirmed", "cancelled"], "description": "The status of the reservation" },
+        "createdAt": { "type": "string", "format": "date-time", "description": "When the reservation was made" }
+      },
+      "required": ["service", "date", "time", "name", "email", "phone"]
+    }
+  },
+  "firestore": {
+    "/reservations/{reservationId}": {
+      "schema": "Reservation",
+      "description": "Collection of all client reservations"
+    }
+  }
+}

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ébène Esthétique | Maison de Beauté</title>
+    <meta name="description" content="Expert afro hair care and premium styling in Montreal. Sublimez votre beauté naturelle.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Ébène Esthétique</a>
+            <div class="nav-links">
+                <a href="#home" data-t="nav.home">Accueil</a>
+                <a href="#services" data-t="nav.services">Services</a>
+                <a href="#offers" data-t="nav.offers">Offres</a>
+                <a href="#about" data-t="nav.about">À Propos</a>
+                <a href="#contact" data-t="nav.contact">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <div class="lang-switcher">
+                    <button id="lang-en" class="lang-btn">EN</button>
+                    <span class="separator">|</span>
+                    <button id="lang-fr" class="lang-btn active">FR</button>
+                </div>
+                <button class="btn btn-primary open-booking" data-t="nav.book">Réserver</button>
+                <button class="mobile-menu-toggle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="close-menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <div class="mobile-links">
+            <a href="#home" data-t="nav.home">Accueil</a>
+            <a href="#services" data-t="nav.services">Services</a>
+            <a href="#offers" data-t="nav.offers">Offres</a>
+            <a href="#about" data-t="nav.about">À Propos</a>
+            <a href="#contact" data-t="nav.contact">Contact</a>
+            <button class="btn btn-primary open-booking" data-t="nav.book">Réserver</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="tag" data-t="hero.tag">Maison de Beauté</span>
+                <h1 class="display-title">
+                    <span data-t="hero.title">Sublimez votre</span><br>
+                    <em class="serif italic" data-t="hero.italic">beauté naturelle</em>
+                </h1>
+                <p class="sub-text" data-t="hero.sub">Soins experts des cheveux afro et coiffure haut de gamme à Montréal.</p>
+                <div class="hero-btns">
+                    <button class="btn btn-primary open-booking" data-t="hero.cta">Prendre Rendez-vous</button>
+                    <a href="#services" class="btn btn-outline" data-t="hero.view">Voir les Services</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <span data-t="nav.home">Défiler</span>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="intro">
+        <div class="container">
+            <div class="intro-grid">
+                <div class="intro-text">
+                    <h2 class="section-title">
+                        <span data-t="intro.title">Des soins authentiques pour</span><br>
+                        <em class="serif italic" data-t="intro.italic">votre texture unique</em>
+                    </h2>
+                    <p data-t="intro.p">Nous nous spécialisons dans l'art des cheveux afro. Notre mission est de fournir une expérience haut de gamme qui célèbre votre beauté naturelle grâce à un savoir-faire expert et une attention personnalisée.</p>
+                </div>
+                <div class="intro-image">
+                    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?q=80&w=1200&auto=format&fit=crop" alt="Afro Hair Care" referrerpolicy="no-referrer">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-t="services.title">Nos Services</h2>
+                <p class="section-sub" data-t="services.sub">Chaque traitement est adapté à votre texture de cheveux unique et à votre style personnel, en utilisant uniquement les meilleurs produits.</p>
+            </div>
+            
+            <div class="categories-filter" id="categories-container">
+                <!-- Categories will be injected by JS -->
+            </div>
+
+            <div class="services-grid" id="services-container">
+                <!-- Services will be injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Offers Section -->
+    <section id="offers" class="offers">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-t="offers.title">Forfaits Exclusifs</h2>
+                <p class="section-sub" data-t="offers.sub">Des expériences curatées conçues pour un rajeunissement complet et un style durable.</p>
+            </div>
+
+            <div class="offers-grid" id="offers-container">
+                <!-- Offers will be injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images">
+                    <div class="img-large">
+                        <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?q=80&w=1200&auto=format&fit=crop" alt="Salon" referrerpolicy="no-referrer">
+                    </div>
+                    <div class="img-small">
+                        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=800&auto=format&fit=crop" alt="Treatment" referrerpolicy="no-referrer">
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="tag" data-t="about.tag">Notre Histoire</span>
+                    <h2 class="section-title">
+                        <span data-t="about.title">Passion pour</span><br>
+                        <em class="serif italic" data-t="about.italic">l'Excellence Afro</em>
+                    </h2>
+                    <p data-t="about.p1">Chez Ébène Esthétique, nous croyons que les cheveux afro sont une couronne de possibilités infinies. Fondé avec une passion pour la beauté naturelle, notre salon est un sanctuaire pour le soin de soi.</p>
+                    <p data-t="about.p2">Notre équipe de stylistes experts combine des techniques traditionnelles avec la science capillaire moderne pour garantir que vos cheveux restent sains et forts. Des tresses complexes à l'entretien professionnel des locs, nous célébrons la diversité de la beauté.</p>
+                    <button class="btn btn-outline" data-t="about.cta">Rencontrez notre équipe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title text-center" data-t="testimonials.title">Avis Clients</h2>
+            <div class="testimonials-grid" id="testimonials-container">
+                <!-- Testimonials will be injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2 class="section-title" data-t="contact.title">Visitez-nous</h2>
+                    <p class="section-sub" data-t="contact.sub">Situé au cœur de Montréal, notre salon offre une évasion paisible loin de l'agitation de la ville.</p>
+                    
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            </div>
+                            <div>
+                                <h4 data-t="contact.address">Adresse</h4>
+                                <p>1234 Rue Sherbrooke Ouest, Montréal, QC H3G 1H6</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 data-t="contact.phone">Téléphone</h4>
+                                <p>+1 (514) 555-0123</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                            </div>
+                            <div>
+                                <h4 data-t="contact.social">Réseaux Sociaux</h4>
+                                <p>@ebene.esthetique</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.345678901234!2d-73.57890123456789!3d45.50123456789012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a4567890123%3A0x1234567890abcdef!2sSherbrooke%20St%20W%2C%20Montreal%2C%20QC!5e0!3m2!1sen!2sca!4v1646753522408!5m2!1sen!2sca" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Ébène Esthétique</div>
+                <div class="footer-info">
+                    <p data-t="footer.rights">© 2026 Ébène Esthétique. Tous droits réservés.</p>
+                    <div class="footer-links">
+                        <a href="#" data-t="footer.privacy">Politique de Confidentialité</a>
+                        <a href="#" data-t="footer.terms">Conditions d'Utilisation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div class="modal-overlay" id="booking-modal">
+        <div class="modal-content">
+            <button class="close-modal">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            
+            <div class="modal-header">
+                <h3 data-t="booking.title">Réservez Votre Espace</h3>
+                <p data-t="booking.sub">Découvrez le luxe des soins capillaires personnalisés.</p>
+            </div>
+
+            <div class="booking-steps">
+                <div class="step active" data-step="1">
+                    <span class="step-num">1</span>
+                    <span data-t="booking.step1">Service</span>
+                </div>
+                <div class="step" data-step="2">
+                    <span class="step-num">2</span>
+                    <span data-t="booking.step2">Horaire</span>
+                </div>
+                <div class="step" data-step="3">
+                    <span class="step-num">3</span>
+                    <span data-t="booking.step3">Détails</span>
+                </div>
+            </div>
+
+            <div class="step-content active" id="step-1">
+                <h4 data-t="booking.selectService">Sélectionnez un Service</h4>
+                <div class="booking-services-list" id="booking-services-container">
+                    <!-- Services will be injected by JS -->
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary next-step" disabled data-t="booking.continue">Continuer</button>
+                </div>
+            </div>
+
+            <div class="step-content" id="step-2">
+                <h4 data-t="booking.chooseDateTime">Choisissez Date & Heure</h4>
+                <div class="date-time-picker">
+                    <div class="calendar-placeholder">
+                        <input type="date" id="booking-date" class="form-input">
+                    </div>
+                    <div class="time-slots">
+                        <h5 data-t="booking.availableTimeSlots">Créneaux Horaires Disponibles</h5>
+                        <div class="slots-grid" id="time-slots-container">
+                            <!-- Slots will be injected by JS -->
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-outline prev-step" data-t="booking.back">Retour</button>
+                    <button class="btn btn-primary next-step" disabled data-t="booking.continue">Continuer</button>
+                </div>
+            </div>
+
+            <div class="step-content" id="step-3">
+                <h4 data-t="booking.yourInfo">Vos Informations</h4>
+                <form id="booking-form" class="booking-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-t="booking.firstName">Prénom</label>
+                            <input type="text" required class="form-input" name="firstName">
+                        </div>
+                        <div class="form-group">
+                            <label data-t="booking.lastName">Nom</label>
+                            <input type="text" required class="form-input" name="lastName">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label data-t="booking.phone">Numéro de téléphone</label>
+                        <input type="tel" required class="form-input" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label data-t="booking.email">Email</label>
+                        <input type="email" required class="form-input" name="email">
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <button class="btn btn-outline prev-step" data-t="booking.back">Retour</button>
+                    <button class="btn btn-primary" id="submit-booking" data-t="booking.confirm">Confirmer la Réservation</button>
+                </div>
+            </div>
+
+            <div class="step-content" id="step-success">
+                <div class="success-message">
+                    <div class="success-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    </div>
+                    <h3 data-t="booking.success">Réservation Confirmée !</h3>
+                    <p>Nous vous contacterons sous peu pour confirmer les détails.</p>
+                    <button class="btn btn-primary close-modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="./js/script.js"></script>
+</body>
+</html>
